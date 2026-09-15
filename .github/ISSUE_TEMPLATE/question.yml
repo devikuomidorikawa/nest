@@ -1,0 +1,25 @@
+name: 要望・使い方の質問
+description: 追加してほしい機能や使い方について。
+title: "[相談] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        投稿は公開されます。個人情報や社内情報を含めないでください。
+        使い方・よくある質問もご確認ください。対応や回答時期を保証するものではありません。
+  - type: dropdown
+    id: category
+    attributes:
+      label: 内容
+      options:
+        - 使い方の質問
+        - 機能の要望
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 相談内容
+      description: 実現したいことや、困っている場面を書いてください。
+    validations:
+      required: true

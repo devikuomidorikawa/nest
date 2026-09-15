@@ -1,0 +1,59 @@
+name: 不具合の報告
+description: 起動や操作で困っていることを報告します。
+title: "[不具合] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        この投稿は公開されます。実名、メールアドレス、社内情報、個人ファイルのパスを含めないでください。
+        設定ファイルやログをそのまま添付せず、再現に必要な情報だけを書いてください。
+  - type: input
+    id: version
+    attributes:
+      label: Nestのバージョン
+      description: 「このアプリについて」で確認できます。起動できない場合はダウンロードした版を書いてください。
+      placeholder: 1.9.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Windowsの版と画面環境
+      placeholder: Windows 11、表示倍率150%、画面1台
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: どの操作をすると問題が起きるか、順番に書いてください。
+      placeholder: |
+        1. Nestを起動する
+        2. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待していた動作
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際に起きたこと
+      description: エラーの文言がある場合は、個人情報を伏せて書いてください。
+    validations:
+      required: true
+  - type: input
+    id: frequency
+    attributes:
+      label: 発生頻度と登録件数の目安
+      placeholder: 毎回／ときどき、1タブに約20件
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公開前の確認
+      options:
+        - label: 投稿や添付に、個人情報・社内情報・秘密のURLが含まれていないことを確認しました。
+          required: true
