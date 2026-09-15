@@ -1,0 +1,18 @@
+# 公開リポジトリには説明文と問い合わせフォームだけを置きます。
+# 配布ZIPはReleasesへ添付します。
+*.exe
+*.dll
+*.pdb
+*.zip
+*.ico
+*.cs
+*.csproj
+*.ps1
+data/
+history/
+logs/
+source/
+work/
+build/
+*.log
+publisher.txt
